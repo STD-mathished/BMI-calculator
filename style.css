@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    width: auto;
+    background: linear-gradient(45deg, #314755, #26a0da);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+#bmi {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border:  2px solid white;
+    padding: 40px;
+    border-radius: 10%;
+}
+
+.form {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    gap: 15px;
+}
+
+input {
+    border: none;
+    border-bottom: 2px solid #26a0da;
+    padding: 8px;
+}
+
+button {
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+    background-color: #314755;
+    cursor: pointer;
+    transition-property: padding, font-size;
+    transition-duration: 1.4s;
+}
+
+button:hover {
+    padding: 6px;
+    font-size: 14px;
+}
