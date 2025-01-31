@@ -1,50 +1,45 @@
 function bmi() {
-    let s1 = document.querySelector("#weight");
-    let s2 = document.querySelector("#height")
-
-
-    let weight = s1.value;
-    let height = s2.value;
-    let bmi = Math.round(weight / (height * height));
-    
-    checkBmi(bmi);
+    let weight = parseInt(document.querySelector("#weight").value);
+    let height = parseInt(document.querySelector("#height").value);
+    let bmi = 0;
+    let result = document.querySelector("#result");
+    if(weight != 0 && height != 0)
+    {
+        bmi = weight / Math.pow(height/100, 2);
+    }
+    result.value = bmi;
+    chekcbmi(bmi);
 
 }
 
-function checkBmi(bmi){
+function chekcbmi (bmi) {
+    let resultDiv = document.querySelector("#down");
+    let result = document.createElement("p");
     if(bmi < 18.5)
     {
-        alert("You are underweight");
+        //poids insuffisant
+        result.innerText = "You are underweight";
     }
-    else if(bmi < 24.9)
+    else if (bmi < 24.9)
     {
-        alert("You have a normal weight");
+        //poids normal
+        result.innerText = "You are normal";
     }
-    else if(bmi < 29.9)
+    else if (bmi < 29.9)
     {
-        alert("You are overweight");
+        // excès pondéral, surpoids
+        result.innerText = "You are overweight";
     }
-    else if(bmi > 30)
+    else if(bmi < 39.9)
     {
-        alert("You are obese");
+        //obésité
+        result.innerText = "You are obese";
     }
+    else if (bmi > 40)
+    {
+        // obésité morbide
+        result.innerText = "You suffer from morbid obesity";
+    }
+    resultDiv.appendChild(result);
+
 }
-
-
-function bmx() {
-    let s1 = document.querySelector("#weight");
-    let s2 = document.querySelector("#height")
-
-
-    let weight = s1.value;
-    let height = s2.value;
-    let bmi = Math.round(weight / (height * height));
-
-    let bmiDiv = document.querySelector("#bmi");
-    let input = document.createElement("input");
-
-    input.value = bmi;
-    bmiDiv.appendChild(input);
-    // adding a comment
-}
-

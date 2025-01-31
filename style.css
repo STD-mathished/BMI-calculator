@@ -53,3 +53,10 @@ button:hover {
     padding: 6px;
     font-size: 14px;
 }
+
+#down {
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 10px;
+}
